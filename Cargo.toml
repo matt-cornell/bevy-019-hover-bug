@@ -1,0 +1,23 @@
+[package]
+name = "regression-019"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy_ecs = "^0" # make the proc-macros happy
+
+[dependencies.bevy-018]
+package = "bevy"
+version = "0.18.1"
+default-features = false
+optional = true
+features = ["default_platform", "ui_bevy_render", "ui_picking", "experimental_bevy_ui_widgets"]
+
+[features]
+default = ["bevy-018"]
+bevy-018 = ["dep:bevy-018"]
+
+dev = ["bevy-018?/dev"]
+
+[profile.dev.package."*"]
+opt-level = 3
