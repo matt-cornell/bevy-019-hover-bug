@@ -1,7 +1,7 @@
 #[cfg(feature = "bevy-018")]
-extern crate bevy_018 as bevy;
+use bevy_018::{self as bevy, ecs as bevy_ecs};
 #[cfg(feature = "bevy-019")]
-extern crate bevy_019 as bevy;
+use bevy_019::{self as bevy, ecs as bevy_ecs};
 
 use bevy::ecs::relationship::RelatedSpawner;
 use bevy::picking::hover::Hovered;
