@@ -8,17 +8,16 @@ package = "bevy"
 version = "0.18.1"
 default-features = false
 optional = true
-features = ["default_platform", "ui_bevy_render", "ui_picking", "experimental_bevy_ui_widgets"]
+features = ["default_platform", "ui_bevy_render", "ui_picking"]
 
 [dependencies.bevy-019]
 package = "bevy"
 version = "0.19.0"
 default-features = false
 optional = true
-features = ["default_platform", "ui_bevy_render", "ui_picking", "bevy_ui_widgets"]
+features = ["default_platform", "ui_bevy_render", "ui_picking"]
 
 [features]
-default = ["bevy-019"]
 bevy-018 = ["dep:bevy-018"]
 bevy-019 = ["dep:bevy-019"]
 
